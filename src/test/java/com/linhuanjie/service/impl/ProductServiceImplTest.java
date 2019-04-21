@@ -48,15 +48,17 @@ public class ProductServiceImplTest {
 
     @Test
     public void save() {
-        ProductInfo productInfo = new ProductInfo();
-        productInfo.setProductId("123457");
-        productInfo.setProductName("皮皮虾");
-        productInfo.setProductPrice(320);
-        productInfo.setProductStock(100);
-        productInfo.setProductDescription("很好吃的虾");
-        productInfo.setProductIcon("http://xxxxx.jpg");
-        productInfo.setProductStatus(ProductStatusEnum.DOWN.getCode());
-        productInfo.setCategoryType(2);
+        ProductInfo productInfo = ProductInfo.builder()
+                .productId("123457")
+                .productName("皮皮虾")
+                .productPrice(320)
+                .productStock(100)
+                .productDescription("很好吃的虾")
+                .productIcon("http://xxxxx.jpg")
+                .productStatus(ProductStatusEnum.UP.getCode())
+                .categoryType(2)
+                .build();
+
         ProductInfo result = service.save(productInfo);
         Assert.assertNotNull(result);
     }

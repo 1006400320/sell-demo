@@ -35,15 +35,16 @@ public class ProductInfoRepositoryTest {
 
     @Test
     public void saveTest(){
-        ProductInfo productInfo = new ProductInfo();
-        productInfo.setProductId("99999");
-        productInfo.setProductName("皮蛋瘦肉粥");
-        productInfo.setProductPrice(800);
-        productInfo.setProductStock(200);
-        productInfo.setProductDescription("传说中的黯然销魂粥");
-        productInfo.setProductIcon("http://xxxx.jpg");
-        productInfo.setProductStatus(ProductStatusEnum.UP.getCode());
-        productInfo.setCategoryType(1);
+        ProductInfo productInfo = ProductInfo.builder()
+                .productId("99999")
+                .productName("皮蛋瘦肉粥")
+                .productPrice(800)
+                .productStock(100)
+                .productDescription("传说中的黯然销魂粥")
+                .productIcon("http://xxxxx.jpg")
+                .productStatus(ProductStatusEnum.UP.getCode())
+                .categoryType(2)
+                .build();
 
         ProductInfo result = repository.save(productInfo);
         Assert.assertEquals("99999",result.getProductId());

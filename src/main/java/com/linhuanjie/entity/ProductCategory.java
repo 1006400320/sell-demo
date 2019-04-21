@@ -1,5 +1,6 @@
 package com.linhuanjie.entity;
 
+import lombok.Builder;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -18,6 +19,7 @@ import java.util.Date;
 @Entity
 @DynamicUpdate
 @Data
+@Builder
 public class ProductCategory {
 
     /** 类目id. */

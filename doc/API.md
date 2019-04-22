@@ -14,7 +14,7 @@ GET /sell/buyer/product/list
 
 返回
 
-```
+```json
 {
     "code": 0,
     "msg": "成功",
@@ -72,7 +72,7 @@ items: [{
 
 返回
 
-```
+```json
 {
   "code": 0,
   "msg": "成功",

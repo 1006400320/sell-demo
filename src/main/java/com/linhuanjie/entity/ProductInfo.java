@@ -1,10 +1,7 @@
 package com.linhuanjie.entity;
 
 import com.linhuanjie.enums.ProductStatusEnum;
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.Entity;
@@ -21,6 +18,9 @@ import java.util.Date;
 @Data
 @Builder
 @DynamicUpdate
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 public class ProductInfo {
 
     @Id

@@ -1,7 +1,7 @@
 package com.linhuanjie.entity;
 
-import lombok.Builder;
-import lombok.Data;
+import jdk.nashorn.internal.objects.annotations.Constructor;
+import lombok.*;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.Entity;
@@ -20,6 +20,9 @@ import java.util.Date;
 @DynamicUpdate
 @Data
 @Builder
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 public class ProductCategory {
 
     /** 类目id. */
@@ -36,12 +39,4 @@ public class ProductCategory {
     private Date createTime;
 
     private Date updateTime;
-
-    public ProductCategory() {
-    }
-
-    public ProductCategory(String categoryName, Integer categoryType) {
-        this.categoryName = categoryName;
-        this.categoryType = categoryType;
-    }
 }

@@ -51,7 +51,7 @@ public class ProductServiceImplTest {
         ProductInfo productInfo = ProductInfo.builder()
                 .productId("123457")
                 .productName("皮皮虾")
-                .productPrice(320)
+                .productPrice(new BigDecimal(320))
                 .productStock(100)
                 .productDescription("很好吃的虾")
                 .productIcon("http://xxxxx.jpg")

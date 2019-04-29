@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -38,7 +39,7 @@ public class ProductInfoRepositoryTest {
         ProductInfo productInfo = ProductInfo.builder()
                 .productId("99999")
                 .productName("皮蛋瘦肉粥")
-                .productPrice(800)
+                .productPrice(new BigDecimal(800))
                 .productStock(100)
                 .productDescription("传说中的黯然销魂粥")
                 .productIcon("http://xxxxx.jpg")
